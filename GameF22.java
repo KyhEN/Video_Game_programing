@@ -11,6 +11,13 @@ public class GameF22 extends GameBase {
 	ImageIcon health = new ImageIcon("Health.png");
 	Image image = health.getImage();
 	Levels levels = new Levels();
+	
+	Zombies [] z1 = 
+		{
+			new Zombies(150, 200, 521, 576),
+			new Zombies(100, 105, 521, 576),
+			new Zombies(50, 100, 521, 576),
+		};
 
 	public void inGameLoop() {
 		// Controls for Level 1
@@ -615,6 +622,10 @@ public class GameF22 extends GameBase {
 		val = health.toString();
 		g.drawImage(image, 15, 15, 10, 10, null);
 		g.drawString(val, 30, 24);
+		
+		for(int i = 0; i < z1.length; i++) {
+			z1[i].draw(g);
+		}
 		// bs.draw(g);
 	}
 
