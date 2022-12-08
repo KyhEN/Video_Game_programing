@@ -1,7 +1,7 @@
 import java.awt.Graphics;
 import java.util.Random;
 
-public class Zombies extends Rect{
+public class Zombies extends Soldier{
 	int vx;
 	int vy;
 	
@@ -10,19 +10,17 @@ public class Zombies extends Rect{
 	
 	Animation [] anim;
 	
-	static final int UP = 0;
+	/*static final int UP = 0;
 	static final int DN = 1;
 	static final int LT = 2;
 	static final int RT = 3;
 	
 	int pose = RT;
 	
-	boolean moving = false;
+	boolean moving = false;*/
 	
 	public Zombies(int x, int y, int w, int h) {
 		super(x, y, w, h);
-		
-		anim = new Animation[1];
 		
 		String [] pose = {"walk"};
 		
@@ -32,5 +30,5 @@ public class Zombies extends Rect{
 	}
 	
 	public void draw(Graphics g) {
-		g.drawImage(anim[0].currentImage(), x, y, w/3, h/3, null);
+		g.drawImage(anim[0].currentImage(), x, y, w/2, h/2, null);
 	}
